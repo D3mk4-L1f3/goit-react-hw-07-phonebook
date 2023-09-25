@@ -7,12 +7,18 @@ import {
   DatedCreate,
 } from '../styled-component/list.styled';
 import { ButtonStyle } from '../styled-component/form.styled';
+import { toast } from 'react-toastify';
 
 export default function ContactList() {
   const contacts = useSelector(state => state.contacts);
   const filteredText = useSelector(state => state.filter);
 
   const dispatch = useDispatch();
+
+  const handleDelete = contactId => {
+    dispatch(deleteContact(contactId));
+    toast.warning('Contact REMOVED');
+  };
 
   const filteredArray = contacts.filter(contact => {
     const contactInfo = `${contact.name} ${contact.number}`
@@ -32,12 +38,15 @@ export default function ContactList() {
           filteredArray.map(contact => (
             <ItemStyle key={contact.id}>
               <p>
-                {contact.name}: {contact.number}
+                {contact.name} : {contact.number}
               </p>
-              <DatedCreate>
+              <DatedCreate title="When was added">
                 Created: {new Date(contact.createdAt).toLocaleDateString()}
               </DatedCreate>
-              <ButtonStyle onClick={() => dispatch(deleteContact(contact.id))}>
+              <ButtonStyle
+                onClick={() => handleDelete(contact.id)}
+                title="Remove your`s contact :("
+              >
                 Delete
               </ButtonStyle>
             </ItemStyle>

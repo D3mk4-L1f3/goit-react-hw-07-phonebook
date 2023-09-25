@@ -20,6 +20,7 @@ export default function Filter() {
         name="searcher"
         type="text"
         placeholder="... searching ..."
+        title="Fast find your`s contact :)"
       />
     </MainContainerStyle>
   );

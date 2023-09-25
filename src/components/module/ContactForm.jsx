@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import { nanoid } from '@reduxjs/toolkit';
 import { useSelector, useDispatch } from 'react-redux';
-import { nanoid } from 'nanoid';
 import { addContact } from '../../redux/contactsSlice';
 
 import {
@@ -9,6 +9,7 @@ import {
   InputStyle,
   ButtonStyle,
 } from '../styled-component/form.styled';
+import { toast } from 'react-toastify';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({ name: '', number: '' });
@@ -39,7 +40,7 @@ export default function ContactForm() {
     const formatedNumber = number.replace(/^(\d{3})(\d{2})(\d+)$/, '$1-$2-$3');
 
     if (isDuplicateContact(formatedName, formatedNumber)) {
-      alert('You have already added the same contact!');
+      toast.error('You have already added the same contact!');
     } else {
       dispatch(
         addContact({
@@ -49,8 +50,8 @@ export default function ContactForm() {
         })
       );
       setFormData({ name: '', number: '' });
+      toast.success('Successfully added :)');
     }
-
     form.reset();
   };
 
@@ -66,6 +67,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleInputChange}
           autoComplete="name"
+          title="Add here your`s contact name :)"
         />
       </LabelStyle>
       <LabelStyle>
@@ -78,9 +80,12 @@ export default function ContactForm() {
           value={formData.number}
           onChange={handleInputChange}
           autoComplete="tel"
+          title="Add here your`s contact number :)"
         />
       </LabelStyle>
-      <ButtonStyle type="submit">Add Contact</ButtonStyle>
+      <ButtonStyle type="submit" title="Push and add your`s contact :)">
+        Add Contact
+      </ButtonStyle>
     </FormAddStyle>
   );
 }
