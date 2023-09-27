@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteContact, fetchContacts } from '../../redux/mockapi/operations';
-import { getContacts, getFilteredName } from '../../redux/contactsSlice';
+import { deleteContact, fetchContacts } from 'redux/mockapi/operations';
+import { getContacts, getFilteredName } from 'redux/contactsSlice';
 
 import {
   ListStyle,

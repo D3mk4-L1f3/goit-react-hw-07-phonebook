@@ -36,6 +36,6 @@ export const EmptyStyle = styled.p`
 `;
 
 export const ContactText = styled.p`
-    word-wrap: wrap;
+    padding: 10px;
     font-size: clamp(10px, 2vw, 20px);
     `;

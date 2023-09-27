@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from '../../redux/mockapi/operations';
-import { getContacts } from '../../redux/contactsSlice';
+import { addContact } from 'redux/mockapi/operations';
+import { getContacts } from 'redux/contactsSlice';
 import { toast } from 'react-toastify';
 
 import {

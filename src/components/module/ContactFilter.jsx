@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { filter } from '../../redux/contactsSlice';
+import { filter } from 'redux/contactsSlice';
 
 import {
   MainContainerStyle,
