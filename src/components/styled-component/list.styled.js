@@ -31,7 +31,7 @@ export const DateCreated = styled.p`
 `;
 
 export const EmptyStyle = styled.p`
-    margin: 0 auto;
+    text-align: center;
     font-size: clamp(13px, 5vw, 45px);
 `;
 
