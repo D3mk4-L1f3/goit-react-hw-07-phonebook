@@ -15,7 +15,7 @@ export const LabelStyle = styled.label`
 
 export const InputStyle = styled.input`
     padding: 10px;
-    font-size: 20px;
+    font-size: clamp(10px, 5vw, 20px);
     border: none;
     outline: transparent;
     background-color: beige;
@@ -28,7 +28,7 @@ export const InputStyle = styled.input`
 
     &::placeholder {
         text-align: center;
-        font-size: 15px;
+        font-size: clamp(5px, 5vw, 15px);
     }
 `;
 

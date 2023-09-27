@@ -1,7 +1,10 @@
 import { useDispatch } from 'react-redux';
-import { filter } from '../../redux/filterSlice';
+import { filter } from '../../redux/contactsSlice';
 
-import { MainContainerStyle } from '../styled-component/app.styled';
+import {
+  MainContainerStyle,
+  ThirdTitleStyle,
+} from '../styled-component/app.styled';
 import { InputStyle } from '../styled-component/form.styled';
 
 export default function Filter() {
@@ -14,7 +17,7 @@ export default function Filter() {
 
   return (
     <MainContainerStyle>
-      <h3>Find contacts by part of name or number</h3>
+      <ThirdTitleStyle>Find your`s contacts :)</ThirdTitleStyle>
       <InputStyle
         onChange={handleFilterChange}
         name="searcher"

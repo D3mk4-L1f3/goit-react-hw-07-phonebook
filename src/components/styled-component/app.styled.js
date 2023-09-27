@@ -22,13 +22,17 @@ export const MainContainerStyle = styled.div({
 
 export const MainTitleStyle = styled.h1({
     textAlign: 'center',
-    fontSize: '40px',
+    fontSize: 'clamp(20px, 5vw, 45px)',
 });
 
 export const SecondTitleStyle = styled.h2({
     textAlign: 'center',
-    fontSize: '38px',
+    fontSize: 'clamp(20px, 5vw, 45px)',
 });
+
+export const ThirdTitleStyle = styled.h3`
+font-size: clamp(10px, 5vw, 30px)
+`;
 
 
 
