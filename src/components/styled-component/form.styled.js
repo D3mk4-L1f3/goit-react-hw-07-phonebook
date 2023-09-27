@@ -33,6 +33,7 @@ export const InputStyle = styled.input`
 `;
 
 export const ButtonStyle = styled.button`
+  font-size: clamp(10px, 2vw, 16px);
   padding: 10px;
   cursor: pointer;
   border-radius: 10px;
