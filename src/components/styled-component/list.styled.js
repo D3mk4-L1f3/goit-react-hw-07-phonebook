@@ -12,7 +12,7 @@ export const ItemStyle = styled.li`
     border-radius: 10px;
     padding: 0 10px;
     height: 45px;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: rgba(223, 227, 230, 0.3);
     `  
 ;
