@@ -17,7 +17,7 @@ export default function Filter() {
 
   return (
     <MainContainerStyle>
-      <ThirdTitleStyle>Find your`s contacts :)</ThirdTitleStyle>
+      <ThirdTitleStyle>Find your`s contact :)</ThirdTitleStyle>
       <InputStyle
         onChange={handleFilterChange}
         name="searcher"
